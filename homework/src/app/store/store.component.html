@@ -1,0 +1,16 @@
+<h3>Store filter</h3>
+
+<input
+  type="text"
+  placeholder="Enter name for filter"
+  [(ngModel)]="filterText"
+  (input)="filterProducts()"
+/>
+
+<div>
+  <h4>Filtered products</h4>
+
+  <ul>
+    <li *ngFor="let product of filteredProducts">{{ product | json }}</li>
+  </ul>
+</div>

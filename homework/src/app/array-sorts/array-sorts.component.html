@@ -1,0 +1,24 @@
+<h3>Array sortings</h3>
+
+<div>
+  <p>Original array: {{ originalArray }}</p>
+  <button (click)="sortedAscending = arraySorts.onSortAscending()">
+    Ascending sort
+  </button>
+  <button (click)="sortedDescending = arraySorts.onSortDescending()">
+    Descending sort
+  </button>
+  <button (click)="maxNumber = arraySorts.onFindMaxNumber()">Max number</button>
+
+  <div *ngIf="sortedAscending.length > 0">
+    <p><strong>Sorted Ascending:</strong> {{ sortedAscending }}</p>
+  </div>
+
+  <div *ngIf="sortedDescending.length > 0">
+    <p><strong>Sorted Descending:</strong> {{ sortedDescending }}</p>
+  </div>
+
+  <div *ngIf="maxNumber !== 0">
+    <p><strong>Maximum Number:</strong> {{ maxNumber }}</p>
+  </div>
+</div>
